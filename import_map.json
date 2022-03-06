@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "https://deno.land/x/lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@bab0ca3830881266fa0052123aaacf1de7e8a689/",
+    "lume": "https://cdn.jsdelivr.net/gh/lumeland/lume@bab0ca3830881266fa0052123aaacf1de7e8a689/mod.ts",
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@bab0ca3830881266fa0052123aaacf1de7e8a689/"
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "scripts": {
+        "server": "lume --serve",
+        "reload": "windicss --dev --output styles.css index.html src/**",
+        "dev": "concurrently \"npm run server\" \"npm run reload\""
+    },
+    "devDependencies": {
+        "concurrently": "7.0.0",
+        "windicss": "3.5.1"
+    }
+}
