@@ -1,17 +1,19 @@
-import React, { useState } from "https://esm.sh/react@17";
-import VideoPlayer from "./video_player.tsx"
+import React from "https://esm.sh/react@17";
+import FeedVideos from "./feed_videos.tsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-	const ratio = { ['--aspect-ratio' as any]: '9/16' }
+  const ratio = { ["--aspect-ratio" as any]: "9/16" };
 
   return (
-    <main className="grid place-content-center text-white h-screen">
-    	<section className="App max-w-[370px] h-full" style={ratio}>
-        <VideoPlayer/>
+    <main className="grid text-white h-screen overflow-x-hidden">
+      <section
+        className="App max-w-[370px] h-full overflow-y-scroll"
+        style={ratio}
+      >
+        <FeedVideos />
       </section>
     </main>
-  )
+  );
 }
 
-export default App
+export default App;
