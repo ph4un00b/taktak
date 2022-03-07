@@ -8,46 +8,41 @@ function VideoPlayer() {
   const video = useRef<HTMLVideoElement>(null);
 
   function handle_play() {
-    if (!video) return;
-    if (!video.current) return;
+    const { current: video_el } = video;
+    if (!video_el) return;
 
-    if (playing) {
-      video.current.pause();
-    } else {
-      video.current.play();
-    }
+    playing ? video_el.pause() : video_el.play();
 
     setPlaying(!playing);
   }
+
 
   return (
     <div className="relative">
       <video
         ref={video}
-        autoPlay
+        loop
         muted
         className="w-full"
         src={src}
         controls={false}
+        onClick={handle_play}
       />
 
-      <button
-        className="absolute inset-0 m-auto w-16 h-16 bg-transparent rounded-full border-1 border-solid border-black"
-        onClick={handle_play}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className={`absolute inset-0 m-auto w-16 h-16 bg-transparent ${
+          playing ? "opacity-0" : ""
+        }`}
+        viewBox="0 0 20 20"
+        fill="currentColor"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fillRule="evenodd"
-            d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-            clipRule="evenodd"
-          />
-        </svg>
-      </button>
+        <path
+          fillRule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+          clipRule="evenodd"
+        />
+      </svg>
     </div>
   );
 }
