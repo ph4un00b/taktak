@@ -1,0 +1,57 @@
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+}
+.bg-transparent {
+  background-color: transparent;
+}
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+.h-screen {
+  height: 100vh;
+}
+.h-full {
+  height: 100%;
+}
+.h-16 {
+  height: 4rem;
+}
+.m-auto {
+  margin: auto;
+}
+.max-w-\[370px\] {
+  max-width: 370px;
+}
+.opacity-0 {
+  opacity: 0;
+}
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.inset-0 {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+.w-full {
+  width: 100%;
+}
+.w-16 {
+  width: 4rem;
+}
