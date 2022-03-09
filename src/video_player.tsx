@@ -1,4 +1,6 @@
 import React, { useRef, useState } from "https://esm.sh/react@17";
+import { Kokoro } from "./icons/kokoro.tsx";
+import PlayerActions from "./player_actions.tsx";
 
 function VideoPlayer({ src }: { src: string }) {
   const [playing, setPlaying] = useState(false);
@@ -39,6 +41,9 @@ function VideoPlayer({ src }: { src: string }) {
           clipRule="evenodd"
         />
       </svg>
+
+
+      <PlayerActions />
     </div>
   );
 }
