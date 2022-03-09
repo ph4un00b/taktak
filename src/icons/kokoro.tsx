@@ -3,7 +3,7 @@ import React from "https://esm.sh/react@17";
 export function Kokoro({fill = "currentColor"}) {
   return (
     <svg
-      className="w-6 h-6"
+      className="w-16 h-16"
       fill={fill}
       stroke="currentColor"
       viewBox="0 0 24 24"
